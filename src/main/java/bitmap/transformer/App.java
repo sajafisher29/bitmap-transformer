@@ -37,6 +37,3 @@ public class App {
     //Continue creating transform methods and tests to match
 
 }
-public static getFile(){
-
-        }
