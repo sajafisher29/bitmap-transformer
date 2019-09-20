@@ -6,7 +6,8 @@ import java.nio.Buffer;
 import javax.imageio.ImageIO;
 
 
-public class bitmap {
+
+public class Bitmap {
     public static void main(String[] args)throws IOException {
         int width = 963; //width of the image
         int height = 640; //height of the image
