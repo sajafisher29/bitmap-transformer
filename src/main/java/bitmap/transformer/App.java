@@ -3,9 +3,11 @@
  */
 package bitmap.transformer;
 
+import java.io.IOException;
+
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         //Run the application to make sure read and write of bitmap file is possible
 
@@ -17,16 +19,25 @@ public class App {
 
         //Start working with command line arguments. Start by making the output file path a command line argument and ensure it works.
 
+        String file = args[0];
 
+        // Create instance using that file's data
+        Bitmap bitmapFromFile = new Bitmap(file);
+
+        // Methods
+        if (args[2].equals("grayscale")) {
+            bitmapFromFile.transformToGrayscale();
+        }
+
+        if (args[2].equals("green")) {
+            bitmapFromFile.transformToGreen();
+        }
+
+        if (args[2].equals("randomize")) {
+            bitmapFromFile.transformToRandomize();
+        }
+        bitmapFromFile.writeNewFile(args[1]);
     }
-
-
-
-
-
-
-    //Continue creating transform methods and tests to match
-
 
 }
 
