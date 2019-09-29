@@ -10,10 +10,4 @@ public class AppTest {
 
     //Build tests for transformations
 
-    String filePath = "assets/mario.bmp";
-
-    @Test
-    public void testRandomize() {
-        File file = new File(pathToFile);
-        Bitmap bitmap = new Bitmap(file);
 }
